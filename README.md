@@ -6,14 +6,14 @@
 - Yarn 3 with PnP enabled (read below if you want to opt out) and editor SDKs included
 - Extensive ESLint config + prettier + commitlint to standartize code style with configured git hooks
 - Established project structure for medium and large projects
-- GitHub CI and CD workflows for running tests and deployment to GitHub Pages + simple build Dockerfile
+- GitHub CI/CD workflows for running tests, making releases with automatic release notes from conventional commits and deployment to GitHub Pages
 - Long README to explain some stuff
 
 ## Usage
 
 1. Make sure to have your environment set up by doing one of these:
    - Install `yarn` and `nvm` to use (and install if needed) the correct node version for the project.
-   - Install `docker`. The included Dockerfile allows you to either run a dev server with HMR or make a build for deployment.
+   - Install `docker`. The included Dockerfile allows you to make a build for manual deployment.
 2. Clone the repo.
 3. _(Optional)_ Configure your editor to be able to work with PnP packages (required if you use VS Code/vim/neovim/emacs)
    - For VS Code yarn SDKs are already included in the project, all you need to do is install [ZipFS](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs) addon to make go to definition work correctly.
@@ -27,6 +27,22 @@
      ]
      ```
    - For JetBrains IDEs take a look [here](https://www.jetbrains.com/help/webstorm/eslint.html#ws`eslint`configure`highlighting`override`configuration`severity)
+5. Continue reading to configure CI/CD
+
+## CI/CD
+
+You don't have to do anything to get CI for tests working, just push any branch and see the results on GitHub.
+
+For CD you need to do a few things first:
+
+1. Create a PAT (we can't use default `GITHUB_TOKEN` as it [limits our ability to trigger other workflows](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow)). Go to GitHub Settings -> Developer Settings -> Personal access tokens, generate a new one with `repo` scope and no expiration and copy it.
+2. Create a secret to store the PAT. Go to your repository settings -> Secrets and create a new one with name `PAT` and the value from the previous step.
+3. Choose GitHub Pages source. Go to your repository settings -> Pages and set the source to GitHub Actions.
+4. Change environment protection rules (required because tags are used to make deployments). Go to your repository settings -> Environments -> github-pages and add new deployment branch rule with pattern `v*`
+
+Now create some cool features or make fixes and commit them with messages adhering to standard conventional commits rules. When you are ready and all tests are green, go to GitHub Actions -> Release and run the workflow. This will check if your code still builds, create/update a `CHANGELOG.md` from the commit messages of types `feature` or `fix`, bump major/minor/patch version in `package.json` according to your commits' types, create a new tag with this version, create a release on GitHub with the generated release notes (same as new changes in `CHANGELOG.md`). If the release is successful, Deployment workflow starts to build and deploy the app to GitHub Pages.
+
+To make releases [semantic-release](https://github.com/semantic-release/semantic-release) is used so you can read their docs for more details (keep in mind that their assumed workflow is to automatically release on every push to master which is not used here as it doesn't really make sense in my opinion).
 
 ## Yarn 3 with PnP enabled, but Zero Installs disabled?
 
