@@ -1,10 +1,12 @@
-name: Tests
+name: Release
 on:
-  push:
+  workflow_dispatch:
 env:
   node-version: 18.7.0
+  # Disable husky hooks
+  HUSKY: 0
 jobs:
-  test:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,10 +16,9 @@ jobs:
       - uses: ./.github/actions/yarn-cache
       - name: Install modules
         run: yarn --immutable
-      - name: Run linter
-        run: yarn lint:nocache
-      - name: Run formatter
-        run: yarn format
-      - name: Run tests
-        # Standard GitHub Linux runners have 2-core CPUs at the moment
-        run: yarn test:coverage --maxWorkers=2
+      - name: Check if builds
+        run: yarn build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run: yarn semantic-release

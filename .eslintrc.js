@@ -78,7 +78,13 @@ module.exports = {
   rules: commonRules,
   overrides: [
     {
-      files: ['webpack.*.js', '.eslintrc.js', 'jest.config.js', 'commitlint.config.js'],
+      files: [
+        'webpack.*.js',
+        '.eslintrc.js',
+        'jest.config.js',
+        'commitlint.config.js',
+        'release.config.js',
+      ],
       env: { node: true },
     },
     {

@@ -1,10 +1,11 @@
-name: Deployment
+name: Deploy
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [released]
+  workflow_dispatch:
 env:
   node-version: 18.7.0
+permissions: write-all
 jobs:
   deploy:
     environment:
