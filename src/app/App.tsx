@@ -1,3 +1,5 @@
+import { Button } from '@/components/Button'
+import { Heading } from '@/components/Heading'
 import { css } from '@emotion/react'
 
 export default function App() {
@@ -7,7 +9,8 @@ export default function App() {
         color: orange;
       `}
     >
-      shjksjk
+      <Heading>App heading</Heading>
+      <Button>Button</Button>
     </div>
   )
 }

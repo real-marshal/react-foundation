@@ -14,7 +14,7 @@ module.exports = (api) => ({
       {
         runtime: 'automatic',
         importSource: '@emotion/react',
-        development: api.env('development'),
+        development: api.env(['development', 'storybookDev']),
         allowDeclareFields: true,
         optimizeConstEnums: true,
       },

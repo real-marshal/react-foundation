@@ -5,6 +5,7 @@ const TSReactExtends = [
   'plugin:import/typescript',
   'plugin:react/recommended',
   'plugin:react-hooks/recommended',
+  'plugin:storybook/recommended',
 ]
 
 const TSParserOptions = {
@@ -43,7 +44,11 @@ const commonRules = {
   ...disabledCommonRules.reduce((result, rule) => ({ ...result, [rule]: 'off' }), {}),
 }
 
-const disabledTSReactRules = ['react/jsx-uses-react', 'react/react-in-jsx-scope']
+const disabledTSReactRules = [
+  'react/jsx-uses-react',
+  'react/react-in-jsx-scope',
+  'react/no-unescaped-entities',
+]
 
 const TSReactRules = {
   ...disabledTSReactRules.reduce((result, rule) => ({ ...result, [rule]: 'off' }), {}),

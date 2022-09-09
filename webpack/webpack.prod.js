@@ -7,7 +7,7 @@ module.exports = ({ analyze }) => ({
     rules: [
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, '../src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -21,7 +21,6 @@ module.exports = ({ analyze }) => ({
       },
     ],
   },
-  plugins: [analyze && new BundleAnalyzerPlugin()].filter(Boolean),
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
@@ -35,7 +34,7 @@ module.exports = ({ analyze }) => ({
     },
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,

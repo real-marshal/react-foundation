@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component renders Basic story 1`] = `
+.emotion-0 {
+  font-family: sans-serif;
+  color: #333;
+  border-bottom: 4px solid orange;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+<body>
+  <div>
+    <h1
+      class="emotion-0 emotion-1"
+    >
+      Heading
+    </h1>
+  </div>
+</body>
+`;

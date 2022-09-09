@@ -12,12 +12,14 @@
       "@/utils": ["utils/*"]
     },
     "types": ["@emotion/react/types/css-prop", "jest"],
-    "outDir": "./dist",
+    "outDir": "./.cache/ts",
     "lib": ["ESNext", "DOM", "WebWorker"],
     "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
     "jsx": "preserve",
+    "incremental": true,
+    "jsxImportSource": "@emotion/react",
     "sourceMap": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -38,5 +40,5 @@
     "allowJs": false
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.{test,spec}.ts", "build/**/*"]
+  "exclude": ["node_modules", "**/*.{test,spec}.ts", "dist/**/*"]
 }

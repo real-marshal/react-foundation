@@ -20,7 +20,7 @@ module.exports = () => ({
     rules: [
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, '../src'),
         use: {
           loader: 'babel-loader',
           options: {
