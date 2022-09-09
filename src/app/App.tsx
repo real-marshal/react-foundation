@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
 import { css } from '@emotion/react'
+import 'modern-normalize'
 
 export default function App() {
   return (

@@ -1,4 +1,5 @@
 const path = require('node:path')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
 const common = require('./webpack/webpack.common.js')()
 
@@ -9,6 +10,10 @@ module.exports = (storybookConfig, mode) => ({
     ...storybookConfig.resolve,
     plugins: common.resolve.plugins,
   },
+  plugins: [
+    ...storybookConfig.plugins,
+    mode === 'production' && new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
+  ].filter(Boolean),
   module: {
     rules: [
       ...common.module.rules,
@@ -25,6 +30,13 @@ module.exports = (storybookConfig, mode) => ({
             cacheCompression: false,
           },
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          mode === 'development' ? 'style-loader' : MiniCSSExtractPlugin.loader,
+          'css-loader',
+        ].filter(Boolean),
       },
     ],
   },

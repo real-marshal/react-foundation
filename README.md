@@ -62,6 +62,10 @@ You can also disable PnP, if you really want to use something more standard, hav
 
 This all leads me to believe that `webpack` + `babel` is still the most versatile, reliable and future proof solution.
 
+## Why use modern-normalize.css?
+
+I see 3 popular projects for normalizing CSS, i.e. `normalize.css`, `modern-normalize.css` and `sanitize.css`. Everyone heard about `normalize.css`, but currently it doesn't look maintained, has too many rules specifically for IE, which I think is rarely targeted now, and doesn't contain box-sizing: border-box for everything for some weird reason. On the other hand, `sanitize.css` seems to be too opinionated. This leaves `modern-normalize.css` as the perfectly balanced solution.
+
 ## Formatting decisions
 
 1. JSX single quotes - Dan said [this](https://github.com/airbnb/javascript/issues/269#issuecomment-134990455) and explained more [here](https://github.com/airbnb/javascript/issues/269#issuecomment-135201861). You can’t be smarter than Dan. And also you don’t have to press shift to type quotes, how cool is that? Plus everyone loves consistency.

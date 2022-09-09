@@ -1,5 +1,7 @@
 const path = require('node:path')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const CSSMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = ({ analyze }) => ({
   mode: 'production',
@@ -19,8 +21,16 @@ module.exports = ({ analyze }) => ({
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [MiniCSSExtractPlugin.loader, 'css-loader'],
+      },
     ],
   },
+  plugins: [
+    new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
+    analyze && new BundleAnalyzerPlugin(),
+  ].filter(Boolean),
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
@@ -32,6 +42,7 @@ module.exports = ({ analyze }) => ({
         },
       },
     },
+    minimizer: [`...`, new CSSMinimizerPlugin()],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
