@@ -2,14 +2,14 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@/app": ["app/*"],
-      "@/assets": ["assets/*"],
-      "@/components": ["components/*"],
-      "@/features": ["features/*"],
-      "@/hooks": ["hooks/*"],
-      "@/pages": ["pages/*"],
-      "@/types": ["types/*"],
-      "@/utils": ["utils/*"]
+      "@/app/*": ["app/*"],
+      "@/assets/*": ["assets/*"],
+      "@/components/*": ["components/*"],
+      "@/features/*": ["features/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/pages/*": ["pages/*"],
+      "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"]
     },
     "types": ["@emotion/react/types/css-prop", "jest"],
     "outDir": "./.cache/ts",
