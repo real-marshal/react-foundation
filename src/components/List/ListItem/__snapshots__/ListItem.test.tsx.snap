@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component renders Basic story 1`] = `
+.emotion-0 {
+  list-style: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 4px 12px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.emotion-0:hover {
+  background-color: #ccc;
+}
+
+<body>
+  <div>
+    <li
+      class="emotion-0 emotion-1"
+    >
+      List Item
+    </li>
+  </div>
+</body>
+`;
+
+exports[`ListItem component renders Selected story 1`] = `
+.emotion-0 {
+  list-style: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 4px 12px;
+  margin: 2px;
+  cursor: pointer;
+  background-color: #aaa;
+}
+
+.emotion-0:hover {
+  background-color: #ccc;
+}
+
+<body>
+  <div>
+    <li
+      class="emotion-0 emotion-1"
+    >
+      List Item Selected
+    </li>
+  </div>
+</body>
+`;

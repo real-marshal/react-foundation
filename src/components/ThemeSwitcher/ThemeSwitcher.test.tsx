@@ -1,8 +1,12 @@
 import { composeStories } from '@storybook/react'
 import { render } from '@testing-library/react'
-import * as stories from './Heading.stories'
+import * as stories from './ThemeSwitcher.stories'
 
-describe('Heading component', () => {
+jest.mock('./useThemeSwitcher', () => ({
+  useThemeSwitcher: () => ({ theme: 'system', setTheme: () => null }),
+}))
+
+describe('ThemeSwitcher component', () => {
   const testStories = Object.values(composeStories(stories)).map(
     (Story) => [Story.storyName, Story] as const
   )

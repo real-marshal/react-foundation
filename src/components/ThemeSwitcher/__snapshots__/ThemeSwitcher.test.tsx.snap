@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSwitcher component renders Basic story 1`] = `
+.emotion-0 {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  list-style: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 4px 12px;
+  margin: 2px;
+  cursor: pointer;
+  background-color: #aaa;
+}
+
+.emotion-2:hover {
+  background-color: #ccc;
+}
+
+.emotion-4 {
+  list-style: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 4px 12px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.emotion-4:hover {
+  background-color: #ccc;
+}
+
+<body>
+  <div>
+    <ul
+      class="emotion-0 emotion-1"
+    >
+      <li
+        class="emotion-2 emotion-3"
+        value="system"
+      >
+        System
+      </li>
+      <li
+        class="emotion-4 emotion-3"
+        value="light"
+      >
+        Light
+      </li>
+      <li
+        class="emotion-4 emotion-3"
+        value="dark"
+      >
+        Dark
+      </li>
+    </ul>
+  </div>
+</body>
+`;

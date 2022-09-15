@@ -11,7 +11,7 @@ module.exports = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   // TODO: add asset mocks
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/$1',
   },
   slowTestThreshold: 5,
   verbose: true,

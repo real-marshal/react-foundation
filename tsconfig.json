@@ -9,7 +9,11 @@
       "@/hooks/*": ["hooks/*"],
       "@/pages/*": ["pages/*"],
       "@/types/*": ["types/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      // These also should work with index re-exports
+      "@/components": ["components/index.ts"],
+      "@/hooks": ["hooks"],
+      "@/utils": ["utils"]
     },
     "types": ["@emotion/react/types/css-prop", "jest"],
     "outDir": "./.cache/ts",

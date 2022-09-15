@@ -26,6 +26,8 @@ const disabledCommonRules = [
   'id-length',
   'capitalized-comments',
   'no-warning-comments',
+  'consistent-return',
+  'max-statements',
   'unicorn/prefer-module',
   'unicorn/no-null',
   'unicorn/no-document-cookie',
