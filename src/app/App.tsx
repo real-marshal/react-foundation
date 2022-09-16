@@ -1,25 +1,20 @@
-import { Button, Heading, ThemeSwitcher } from '@/components'
-import { css, Global } from '@emotion/react'
+import { Global } from '@emotion/react'
 import { globalStyles } from './global-styles'
-import { dt } from './design-tokens'
+import { StrictMode } from 'react'
+import { Routes } from './routes'
+import { BrowserRouter } from 'react-router-dom'
+import { CSSVariables } from '@/features/Theming'
 
 import 'modern-normalize'
 
 export default function App() {
   return (
-    <>
+    <StrictMode>
+      <Global styles={CSSVariables} />
       <Global styles={globalStyles} />
-      <div
-        css={css`
-          color: orange;
-          background: ${dt.colors.background};
-          padding: ${dt.padding.lg};
-        `}
-      >
-        <Heading>App heading</Heading>
-        <Button>Button</Button>
-        <ThemeSwitcher />
-      </div>
-    </>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </StrictMode>
   )
 }

@@ -1,5 +1,5 @@
 import type { NestedRecord } from '@/types/common'
-import { flattenObj, traverseObj } from './collection'
+import { flattenObj, traverseObj } from '@/utils'
 
 export const designTokensToCSSVarsStyle = (
   designTokens: NestedRecord<string, string>,

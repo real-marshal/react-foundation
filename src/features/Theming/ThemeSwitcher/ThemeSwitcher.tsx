@@ -1,6 +1,6 @@
 import { useThemeSwitcher } from './useThemeSwitcher'
 import { capitalize } from '@/utils'
-import { List } from '../List'
+import { List } from '@/components'
 
 const themes = ['system', 'light', 'dark'] as const
 

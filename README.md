@@ -4,7 +4,7 @@
 
 - Stable familiar tools like Webpack and Babel for bundling, HMR, automatic polyfilling etc but pre-configured for best performance
 - Yarn 3 with PnP enabled (read below if you want to opt out) and editor SDKs included
-- Extensive ESLint config + prettier + commitlint to standartize code style with configured git hooks
+- Extensive ESLint config & strict TS + prettier + commitlint to standartize code style with configured git hooks
 - Established project structure for medium and large projects
 - GitHub CI/CD workflows for running tests, making releases with automatic release notes from conventional commits and deployment to GitHub Pages
 - Long README to explain some stuff

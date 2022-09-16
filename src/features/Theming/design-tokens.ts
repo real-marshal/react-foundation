@@ -1,5 +1,5 @@
-import { designTokensToCSSVarNames } from '@/utils'
 import { light } from './themes/light'
+import { designTokensToCSSVarNames } from './utils'
 
 export const dtValues = {
   padding: {

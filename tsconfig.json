@@ -13,6 +13,7 @@
       // These also should work with index re-exports
       "@/components": ["components/index.ts"],
       "@/hooks": ["hooks"],
+      "@/pages": ["pages"],
       "@/utils": ["utils"]
     },
     "types": ["@emotion/react/types/css-prop", "jest"],

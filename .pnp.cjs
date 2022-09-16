@@ -60,6 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/testing-library", "npm:0.0.13"],\
             ["@storybook/testing-react", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:1.3.0"],\
             ["@testing-library/react", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:13.4.0"],\
+            ["@testing-library/react-hooks", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:8.0.1"],\
             ["@types/jest", "npm:29.0.0"],\
             ["@types/react", "npm:18.0.18"],\
             ["@types/react-dom", "npm:18.0.6"],\
@@ -8455,6 +8456,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@testing-library/react-hooks", [\
+        ["npm:8.0.1", {\
+          "packageLocation": "../../.yarn/berry/cache/@testing-library-react-hooks-npm-8.0.1-e0c7be6ffb-8.zip/node_modules/@testing-library/react-hooks/",\
+          "packageDependencies": [\
+            ["@testing-library/react-hooks", "npm:8.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:8.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@testing-library-react-hooks-virtual-5fb5594851/3/.yarn/berry/cache/@testing-library-react-hooks-npm-8.0.1-e0c7be6ffb-8.zip/node_modules/@testing-library/react-hooks/",\
+          "packageDependencies": [\
+            ["@testing-library/react-hooks", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:8.0.1"],\
+            ["@babel/runtime", "npm:7.19.0"],\
+            ["@types/react", "npm:18.0.18"],\
+            ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/react-test-renderer", null],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:18.2.0"],\
+            ["react-error-boundary", "virtual:5fb55948511e2a4bf6d49f09a9230d70d825ff39ac5d07d0992648149a87d855ebac87e55eccf68f9367d0e8fac3fb195e54c9e33ae9a04736efc240e9d6cd66#npm:3.1.4"],\
+            ["react-test-renderer", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-test-renderer",\
+            "@types/react",\
+            "react-dom",\
+            "react-test-renderer",\
             "react"\
           ],\
           "linkType": "HARD"\
@@ -23426,6 +23459,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-error-boundary", [\
+        ["npm:3.1.4", {\
+          "packageLocation": "../../.yarn/berry/cache/react-error-boundary-npm-3.1.4-2310dba89e-8.zip/node_modules/react-error-boundary/",\
+          "packageDependencies": [\
+            ["react-error-boundary", "npm:3.1.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:5fb55948511e2a4bf6d49f09a9230d70d825ff39ac5d07d0992648149a87d855ebac87e55eccf68f9367d0e8fac3fb195e54c9e33ae9a04736efc240e9d6cd66#npm:3.1.4", {\
+          "packageLocation": "./.yarn/__virtual__/react-error-boundary-virtual-fceed35160/3/.yarn/berry/cache/react-error-boundary-npm-3.1.4-2310dba89e-8.zip/node_modules/react-error-boundary/",\
+          "packageDependencies": [\
+            ["react-error-boundary", "virtual:5fb55948511e2a4bf6d49f09a9230d70d825ff39ac5d07d0992648149a87d855ebac87e55eccf68f9367d0e8fac3fb195e54c9e33ae9a04736efc240e9d6cd66#npm:3.1.4"],\
+            ["@babel/runtime", "npm:7.19.0"],\
+            ["@types/react", "npm:18.0.18"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-foundation", [\
         ["workspace:.", {\
           "packageLocation": "./",\
@@ -23458,6 +23514,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/testing-library", "npm:0.0.13"],\
             ["@storybook/testing-react", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:1.3.0"],\
             ["@testing-library/react", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:13.4.0"],\
+            ["@testing-library/react-hooks", "virtual:d51fef5ba0e9a851a39010de3d807e24c4ead164b7bd2e816d3b917626979f32479d3431fb7e2c225d36d17ae118b65cdf016d6c2fc5b6d9e248a55f3acd0414#npm:8.0.1"],\
             ["@types/jest", "npm:29.0.0"],\
             ["@types/react", "npm:18.0.18"],\
             ["@types/react-dom", "npm:18.0.6"],\

@@ -1,4 +1,4 @@
-import { designTokensToCSSVarNames, designTokensToCSSVarsStyle } from './css'
+import { designTokensToCSSVarNames, designTokensToCSSVarsStyle } from './utils'
 
 describe('designTokensToCSSVarsStyle', () => {
   it('should return a string with CSS style with variables', () => {
