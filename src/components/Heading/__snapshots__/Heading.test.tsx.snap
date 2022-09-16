@@ -3,7 +3,7 @@
 exports[`Heading component renders Basic story 1`] = `
 .emotion-0 {
   font-family: sans-serif;
-  color: #333;
+  color: var(--dt-colors-primary);
   border-bottom: 4px solid orange;
   padding-bottom: 10px;
   display: inline-block;

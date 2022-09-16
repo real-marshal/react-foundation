@@ -18,8 +18,8 @@ module.exports = (storybookConfig, mode) => ({
     rules: [
       ...common.module.rules,
       {
-        test: /\.tsx?$/,
-        include: path.resolve(__dirname, './src'),
+        test: /\.[jt]sx?$/,
+        include: [path.resolve(__dirname, './src'), path.resolve(__dirname, './.storybook')],
         use: {
           loader: 'babel-loader',
           options: {
