@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/real-marshal/react-foundation/compare/v1.2.0...v1.2.1) (2022-09-19)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: use hash router due to GH Pages limitations ([d39920d](https://github.com/real-marshal/react-foundation/commit/d39920db5872c669911136f225c399f784fd1e00))
+
 # [1.2.0](https://github.com/real-marshal/react-foundation/compare/v1.1.0...v1.2.0) (2022-09-19)
 
 

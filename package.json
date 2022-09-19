@@ -1,6 +1,6 @@
 {
   "name": "react-foundation",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Real_Marshal",
   "browserslist": "last 2 years",
   "main": "src/index.tsx",
