@@ -2,7 +2,7 @@ import { Global } from '@emotion/react'
 import { globalStyles } from './global-styles'
 import { StrictMode } from 'react'
 import { Routes } from './routes'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { CSSVariables } from '@/features/Theming'
 
 import 'modern-normalize'
@@ -12,9 +12,10 @@ export default function App() {
     <StrictMode>
       <Global styles={CSSVariables} />
       <Global styles={globalStyles} />
-      <BrowserRouter>
+      {/* Used HashRouter here only because GH Pages can't return index.html for any route */}
+      <HashRouter>
         <Routes />
-      </BrowserRouter>
+      </HashRouter>
     </StrictMode>
   )
 }
