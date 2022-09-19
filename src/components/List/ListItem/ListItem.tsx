@@ -1,3 +1,4 @@
+import { dt } from '@/features/Theming'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { LiHTMLAttributes, ReactNode } from 'react'
@@ -8,21 +9,30 @@ interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {
 }
 
 const StyledLI = styled.li<ListItemProps>`
+  color: ${dt.colors.primary};
+  background-color: ${dt.colors.background};
   list-style: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 4px 12px;
-  margin: 2px;
+  padding: ${dt.padding.md} ${dt.padding.lg};
   cursor: pointer;
 
+  &:first-of-type {
+    border-radius: 6px 6px 0 0;
+  }
+
+  &:last-of-type {
+    border-radius: 0 0 6px 6px;
+  }
+
   &:hover {
-    background-color: #ccc;
+    color: ${dt.colors.background};
+    background-color: ${dt.colors.primary};
   }
 
   ${({ selected }) =>
     selected &&
     css`
-      background-color: #aaa;
+      color: ${dt.colors.background};
+      background-color: ${dt.colors.primary};
     `}
 `
 

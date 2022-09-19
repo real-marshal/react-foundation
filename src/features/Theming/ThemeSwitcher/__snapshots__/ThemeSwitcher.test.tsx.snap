@@ -1,66 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemeSwitcher component renders Basic story 1`] = `
+exports[`ThemeSwitcher component opens the menu to choose a theme when the button is clicked 1`] = `
 .emotion-0 {
-  border: 1px solid black;
+  background: var(--dt-colors-gradient);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
+  border: none;
   border-radius: 10px;
-  padding: 2px;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  background: linear-gradient(var(--dt-colors-background), var(--dt-colors-background)) padding-box,var(--dt-colors-gradient);
+  border: 4px solid transparent;
+  border-radius: 10px;
+  padding: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
-  list-style: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 4px 12px;
-  margin: 2px;
-  cursor: pointer;
-  background-color: #aaa;
-}
-
-.emotion-2:hover {
-  background-color: #ccc;
-}
-
 .emotion-4 {
+  color: var(--dt-colors-primary);
+  background-color: var(--dt-colors-background);
   list-style: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 4px 12px;
-  margin: 2px;
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
   cursor: pointer;
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
+}
+
+.emotion-4:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-4:last-of-type {
+  border-radius: 0 0 6px 6px;
 }
 
 .emotion-4:hover {
-  background-color: #ccc;
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
+}
+
+.emotion-6 {
+  color: var(--dt-colors-primary);
+  background-color: var(--dt-colors-background);
+  list-style: none;
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
+  cursor: pointer;
+}
+
+.emotion-6:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-6:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
+.emotion-6:hover {
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
 }
 
 <body>
   <div>
-    <ul
-      class="emotion-0 emotion-1"
-    >
-      <li
+    <div>
+      <button
+        class="emotion-0 emotion-1"
+      >
+        Change the theme
+      </button>
+      <ul
         class="emotion-2 emotion-3"
-        value="system"
       >
-        System
-      </li>
-      <li
-        class="emotion-4 emotion-3"
-        value="light"
+        <li
+          class="emotion-4 emotion-5"
+          value="system"
+        >
+          System
+        </li>
+        <li
+          class="emotion-6 emotion-5"
+          value="light"
+        >
+          Light
+        </li>
+        <li
+          class="emotion-6 emotion-5"
+          value="dark"
+        >
+          Dark
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ThemeSwitcher component renders the button to change theme 1`] = `
+.emotion-0 {
+  background: var(--dt-colors-gradient);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        class="emotion-0 emotion-1"
       >
-        Light
-      </li>
-      <li
-        class="emotion-4 emotion-3"
-        value="dark"
-      >
-        Dark
-      </li>
-    </ul>
+        Change the theme
+      </button>
+    </div>
   </div>
 </body>
 `;

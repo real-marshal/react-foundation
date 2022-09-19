@@ -1,18 +1,23 @@
-import { composeStories } from '@storybook/react'
-import { render } from '@testing-library/react'
-import * as stories from './ThemeSwitcher.stories'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 jest.mock('./useThemeSwitcher', () => ({
   useThemeSwitcher: () => ({ theme: 'system', setTheme: () => null }),
 }))
 
 describe('ThemeSwitcher component', () => {
-  const testStories = Object.values(composeStories(stories)).map(
-    (Story) => [Story.storyName, Story] as const
-  )
+  it('renders the button to change theme', () => {
+    const view = render(<ThemeSwitcher />)
+    expect(view.baseElement).toMatchSnapshot()
+  })
 
-  it.each(testStories)('renders %s story', (_, Story) => {
-    const view = render(<Story />)
+  it('opens the menu to choose a theme when the button is clicked', async () => {
+    const user = userEvent.setup()
+    const view = render(<ThemeSwitcher />)
+
+    await user.click(screen.getByRole('button', { name: 'Change the theme' }))
+
     expect(view.baseElement).toMatchSnapshot()
   })
 })

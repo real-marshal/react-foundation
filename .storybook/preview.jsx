@@ -1,6 +1,7 @@
 import { Global } from '@emotion/react'
 import { CSSVariables } from '../src/features/Theming'
 import { useEffect } from 'react'
+import { MemoryRouter } from 'react-router-dom'
 
 import 'modern-normalize'
 
@@ -29,7 +30,15 @@ const withTheme = (StoryFn, context) => {
   )
 }
 
-export const decorators = [withTheme]
+const withRouter = (StoryFn) => {
+  return (
+    <MemoryRouter>
+      <StoryFn />
+    </MemoryRouter>
+  )
+}
+
+export const decorators = [withTheme, withRouter]
 
 export const globalTypes = {
   theme: {

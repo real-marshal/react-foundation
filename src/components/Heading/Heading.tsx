@@ -4,17 +4,24 @@ import { dt } from '@/features/Theming'
 
 interface HeadingProps {
   children: ReactNode
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  className?: string
 }
 
 const StyledH1 = styled.h1`
   font-family: sans-serif;
   color: ${dt.colors.primary};
-  border-bottom: 4px solid orange;
+  border-bottom: 4px solid;
+  border-image: ${dt.colors.gradient} 1;
   padding-bottom: 10px;
-  display: inline-block;
+  margin: 0;
 `
 
-const Heading = ({ children }: HeadingProps) => <StyledH1>{children}</StyledH1>
+const Heading = ({ children, type, className }: HeadingProps) => (
+  <StyledH1 className={className} as={type}>
+    {children}
+  </StyledH1>
+)
 
 export { Heading }
 export type { HeadingProps }

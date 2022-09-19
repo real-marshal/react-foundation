@@ -2,16 +2,24 @@
 
 exports[`ListItem component renders Basic story 1`] = `
 .emotion-0 {
+  color: var(--dt-colors-primary);
+  background-color: var(--dt-colors-background);
   list-style: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 4px 12px;
-  margin: 2px;
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
   cursor: pointer;
 }
 
+.emotion-0:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
 .emotion-0:hover {
-  background-color: #ccc;
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
 }
 
 <body>
@@ -27,17 +35,26 @@ exports[`ListItem component renders Basic story 1`] = `
 
 exports[`ListItem component renders Selected story 1`] = `
 .emotion-0 {
+  color: var(--dt-colors-primary);
+  background-color: var(--dt-colors-background);
   list-style: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 4px 12px;
-  margin: 2px;
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
   cursor: pointer;
-  background-color: #aaa;
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
+}
+
+.emotion-0:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0 0 6px 6px;
 }
 
 .emotion-0:hover {
-  background-color: #ccc;
+  color: var(--dt-colors-background);
+  background-color: var(--dt-colors-primary);
 }
 
 <body>

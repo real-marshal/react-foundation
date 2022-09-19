@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders Basic story 1`] = `
+@keyframes animation-0 {
+  from, to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    text-shadow: 2px 2px 5px hotpink;
+  }
+
+  20% {
+    -webkit-transform: translate(40px, 10px);
+    -moz-transform: translate(40px, 10px);
+    -ms-transform: translate(40px, 10px);
+    transform: translate(40px, 10px);
+    text-shadow: 2px 2px 5px lime;
+  }
+
+  55% {
+    -webkit-transform: translate(75px, -5px);
+    -moz-transform: translate(75px, -5px);
+    -ms-transform: translate(75px, -5px);
+    transform: translate(75px, -5px);
+    text-shadow: 2px 2px 5px cyan;
+  }
+
+  70% {
+    -webkit-transform: translate(-30px, -15px);
+    -moz-transform: translate(-30px, -15px);
+    -ms-transform: translate(-30px, -15px);
+    transform: translate(-30px, -15px);
+    -webkit-transform: skew(-150deg, -10deg);
+    -moz-transform: skew(-150deg, -10deg);
+    -ms-transform: skew(-150deg, -10deg);
+    transform: skew(-150deg, -10deg);
+    text-shadow: 5px 5px 5px yellow;
+  }
+}
+
+.emotion-0 {
+  height: 200px;
+  background: var(--dt-colors-background);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 7vh;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  font-family: sans-serif;
+  color: var(--dt-colors-primary);
+  border-bottom: 4px solid;
+  border-image: var(--dt-colors-gradient) 1;
+  padding-bottom: 10px;
+  margin: 0;
+  margin: 0;
+  -webkit-animation: animation-0 0.5s infinite;
+  animation: animation-0 0.5s infinite;
+}
+
+.emotion-5 {
+  display: block;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-9 {
+  list-style: none;
+}
+
+.emotion-11 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
+  border: 2px solid var(--dt-colors-primary);
+  color: var(--dt-colors-primary);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.emotion-11:hover {
+  color: var(--dt-colors-background);
+  background: var(--dt-colors-primary);
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.emotion-11.active {
+  color: var(--dt-colors-background);
+  background: var(--dt-colors-primary);
+}
+
+<body>
+  <div>
+    <header
+      class="emotion-0 emotion-1"
+    >
+      <h1
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        React Foundation
+      </h1>
+      <nav
+        class="emotion-5 emotion-6"
+      >
+        <ul
+          class="emotion-7 emotion-8"
+        >
+          <li
+            class="emotion-9 emotion-10"
+          >
+            <a
+              aria-current="page"
+              class="emotion-11 emotion-12 active"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="emotion-9 emotion-10"
+          >
+            <a
+              class="emotion-11 emotion-12"
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</body>
+`;

@@ -2,10 +2,10 @@
 
 exports[`Button component renders Basic story 1`] = `
 .emotion-0 {
-  border-radius: 10px;
-  background-color: orange;
-  padding: 0.5rem 1rem;
+  background: var(--dt-colors-gradient);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
   border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 

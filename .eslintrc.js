@@ -119,6 +119,7 @@ module.exports = {
       rules: {
         ...TSReactRules,
         'no-magic-numbers': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
       },
     },
   ],

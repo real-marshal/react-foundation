@@ -11,4 +11,5 @@ const Template: Story<HeadingProps> = (args) => <Heading {...args} />
 export const Basic = Template.bind({})
 Basic.args = {
   children: 'Heading',
+  type: 'h1',
 }
