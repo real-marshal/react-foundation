@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/real-marshal/react-foundation/compare/v1.1.0...v1.2.0) (2022-09-19)
+
+
+### Features
+
+* :sparkles: add design tokens and theming based on CSS vars ([6afb54d](https://github.com/real-marshal/react-foundation/commit/6afb54d565bfaf5e456f5c9a1f0f34b4b1572855))
+* :sparkles: add theming to storybook ([974675c](https://github.com/real-marshal/react-foundation/commit/974675c1574c552a86659c4502c156114bc7ea41))
+* :sparkles: create some basic components & pages ([19b1de7](https://github.com/real-marshal/react-foundation/commit/19b1de76d236ea97943059347c05656e27a56a50))
+
 # [1.1.0](https://github.com/real-marshal/react-foundation/compare/v1.0.0...v1.1.0) (2022-09-09)
 
 
