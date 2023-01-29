@@ -17,7 +17,7 @@ module.exports = () => ({
       meta: { viewport: 'width=device-width, initial-scale=1.0' },
       templateContent: `
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
           <body>
             <div id="root"></div>
           </body>
@@ -26,6 +26,8 @@ module.exports = () => ({
     }),
     new DotEnv(),
     new ForkTsCheckerWebpackPlugin({
+      // Don't show full screen overlay with errors in dev mode
+      devServer: false,
       // Required for incremental type checking
       typescript: {
         build: true,
@@ -36,7 +38,7 @@ module.exports = () => ({
   module: {
     rules: [
       {
-        test: /\.(?:png|jpe?g|svg)$/,
+        test: /\.(?:png|jpe?g|svg|webm|mp4|woff2?)$/,
         type: 'asset',
       },
       {

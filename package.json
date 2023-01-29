@@ -6,7 +6,7 @@
     "last 2 years"
   ],
   "main": "src/index.tsx",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.3.1",
   "private": true,
   "sideEffects": false,
   "size-limit": [
@@ -28,7 +28,8 @@
     "lint": "eslint . --cache --cache-location .cache/eslint --cache-strategy content",
     "lint:nocache": "eslint .",
     "format": "prettier --check ./src",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "commit": "gacp --no-add --emoji emoji"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
@@ -68,6 +69,7 @@
     "concurrently": "^7.3.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "dotenv-defaults": "^5.0.2",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
@@ -75,16 +77,19 @@
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.0.1",
+    "eslint-plugin-jest-extended": "^2.0.0",
     "eslint-plugin-react": "^7.31.6",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.4",
     "eslint-plugin-testing-library": "^5.6.1",
     "eslint-plugin-unicorn": "^43.0.2",
     "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "gacp": "^3.0.3",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "jest": "^29.0.2",
     "jest-environment-jsdom": "^29.0.2",
+    "jest-extended": "^3.2.3",
     "mini-css-extract-plugin": "^2.6.1",
     "prettier": "^2.7.1",
     "react-refresh": "^0.14.0",

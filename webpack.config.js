@@ -1,3 +1,10 @@
+// To allow using env vars in webpack config
+
+require('dotenv-defaults').config({
+  path: './.env',
+  defaults: './.env.defaults',
+})
+
 const { merge } = require('webpack-merge')
 
 const common = require('./webpack/webpack.common.js')
