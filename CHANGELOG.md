@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/real-marshal/react-foundation/compare/v1.2.1...v1.3.0) (2023-01-29)
+
+
+### Bug Fixes
+
+* 🐛  incorrect browserslist type ([a7f319a](https://github.com/real-marshal/react-foundation/commit/a7f319a5697d6c44ac48c2292aa90de1fe8d51a5))
+* 🔥 remove .pnp files from the repo ([a889008](https://github.com/real-marshal/react-foundation/commit/a8890085d72e1aba527e7aeeec6be0ccd5dc754a))
+
+
+### Features
+
+* ✨  allow changing dev host via dotenv-defaults ([5844cfb](https://github.com/real-marshal/react-foundation/commit/5844cfb7328c3bf1cd2c6a3dd507bb5419c8126a))
+* 💄  add background color toggle in storybook ([6c8c349](https://github.com/real-marshal/react-foundation/commit/6c8c349833c068bdf8d182501649dee673d9090f))
+
 ## [1.2.1](https://github.com/real-marshal/react-foundation/compare/v1.2.0...v1.2.1) (2022-09-19)
 
 
